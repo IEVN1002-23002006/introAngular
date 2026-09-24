@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Figuras</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="mb3">
+          <form>
+            <div class="form.group pt-4">
+              <label for="base">base de la figura:</label>
+              <input [(ngModel)]="base" name="base" type="text" class="form-control" id="base" placeholder="Ingrese la base">
+            </div>
+            <div class="form.group pt-4">
+              <label for="area">altura de la figura:</label>
+              <input [(ngModel)]="altura" name="altura" type="text" class="form-control" id="area" placeholder="Ingrese la altura">
+            </div>
+            <div class="form.group pt-4">
+              <label for="radio">radio de la figura:</label>
+              <input [(ngModel)]="radio" name="radio" type="text" class="form-control" id="radio" placeholder="Ingrese la radio">
+            </div>
+            <div class="form.group pt-4">
+              <label for="lado">lado de la figura:</label>
+              <input [(ngModel)]="lado" name="lado" type="text" class="form-control" id="lado" placeholder="Ingrese el lado">
+            </div>
+            <div class="form.group pt-4">
+              <label for="apotema">apotema de la figura:</label>
+              <input [(ngModel)]="apotema" name="apotema" type="text" class="form-control" id="apotema" placeholder="Ingrese la apotema">
+            </div>
+            <div class="form.group pt-4">
+              <label for="perimetro">perimetro de la figura:</label>
+              <input [(ngModel)]="perimetro" name="perimetro" type="text" class="form-control" id="perimetro" placeholder="Ingrese el perimetro">
+            </div>
+            <hr>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="FiguraSeleccionada" name="radioDefault" id="radioDefault1" value="triangulo">
+              <label class="form-check-label" for="radioDefault1">
+                triangulo
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="FiguraSeleccionada" name="radioDefault" id="radioDefault2" value="rectangulo">
+              <label class="form-check-label" for="radioDefault2">
+                rectangulo
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="FiguraSeleccionada" name="radioDefault" id="radioDefault3" value="circulo">
+              <label class="form-check-label" for="radioDefault3">
+                circulo
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" [(ngModel)]="FiguraSeleccionada" name="radioDefault" id="radioDefault4" value="pentagono">
+              <label class="form-check-label" for="radioDefault4">
+                petagono
+              </label>
+            </div>
+            <br>
+            <hr>
+            <button type="button" class="btn btn-primary" (click)="calcular()">
+              calcular
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-6 pt-4">
+        <h3>El area de la figura es: {{area}}</h3>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
